@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .shadow {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            animation: spin3d 10s linear infinite;
+        }
+
+        .shadow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        @keyframes spin3d {
+            0% {
+                transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            10% {
+                transform: rotate3d(0, 1, 0, 36deg);
+            }
+
+            20% {
+                transform: rotate3d(0, 1, 0, 72deg);
+            }
+
+            30% {
+                transform: rotate3d(0, 1, 0, 108deg);
+            }
+
+            40% {
+                transform: rotate3d(0, 1, 0, 144deg);
+            }
+
+            50% {
+                transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            60% {
+                transform: rotate3d(0, 1, 0, 216deg);
+            }
+
+            70% {
+                transform: rotate3d(0, 1, 0, 252deg);
+            }
+
+            80% {
+                transform: rotate3d(0, 1, 0, 288deg);
+            }
+
+            90% {
+                transform: rotate3d(0, 1, 0, 324deg);
+            }
+
+            100% {
+                transform: rotate3d(0, 1, 0, 360deg);
+            }
+        }
+
+        @-webkit-keyframes spin3d {
+            0% {
+                -webkit-transform: rotate3d(0, 1, 0, 0deg);
+                -ms-transform: rotate3d(0, 1, 0, 0deg);
+                transform: rotate3d(0, 1, 0, 0deg);
+            }
+
+            10% {
+                -webkit-transform: rotate3d(0, 1, 0, 36deg);
+                -ms-transform: rotate3d(0, 1, 0, 36deg);
+                transform: rotate3d(0, 1, 0, 36deg);
+            }
+
+            20% {
+                -webkit-transform: rotate3d(0, 1, 0, 72deg);
+                -ms-transform: rotate3d(0, 1, 0, 72deg);
+                transform: rotate3d(0, 1, 0, 72deg);
+            }
+
+            30% {
+                -webkit-transform: rotate3d(0, 1, 0, 108deg);
+                -ms-transform: rotate3d(0, 1, 0, 108deg);
+                transform: rotate3d(0, 1, 0, 108deg);
+            }
+
+            40% {
+                -webkit-transform: rotate3d(0, 1, 0, 144deg);
+                -ms-transform: rotate3d(0, 1, 0, 144deg);
+                transform: rotate3d(0, 1, 0, 144deg);
+            }
+
+            50% {
+                -webkit-transform: rotate3d(0, 1, 0, 180deg);
+                -ms-transform: rotate3d(0, 1, 0, 180deg);
+                transform: rotate3d(0, 1, 0, 180deg);
+            }
+
+            60% {
+                -webkit-transform: rotate3d(0, 1, 0, 216deg);
+                -ms-transform: rotate3d(0, 1, 0, 216deg);
+                transform: rotate3d(0, 1, 0, 216deg);
+            }
+
+            70% {
+                -webkit-transform: rotate3d(0, 1, 0, 252deg);
+                -ms-transform: rotate3d(0, 1, 0, 252deg);
+                transform: rotate3d(0, 1, 0, 252deg);
+            }
+
+            80% {
+                -webkit-transform: rotate3d(0, 1, 0, 288deg);
+                -ms-transform: rotate3d(0, 1, 0, 288deg);
+                transform: rotate3d(0, 1, 0, 288deg);
+            }
+
+            90% {
+                -webkit-transform: rotate3d(0, 1, 0, 324deg);
+                -ms-transform: rotate3d(0, 1, 0, 324deg);
+                transform: rotate3d(0, 1, 0, 324deg);
+            }
+
+            100% {
+                -webkit-transform: rotate3d(0, 1, 0, 360deg);
+                -ms-transform: rotate3d(0, 1, 0, 360deg);
+                transform: rotate3d(0, 1, 0, 360deg);
+            }
+
+        }
+
+
+        .face {
+            display: flex;
+            position: absolute;
+        }
+
+        .left {
+            width: 6px;
+            height: 200px;
+            background: #666;
+            transform: rotateY(-90deg) translateZ(3px);
+        }
+
+        .right {
+            width: 6px;
+            height: 200px;
+            background: #666;
+            transform: rotateY(90deg) translateZ(197px)
+        }
+
+        .front {
+            width: 100%;
+            height: 100%;
+            transform: translateZ(3px)
+        }
+
+        .back {
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg) translateZ(3px)
+        }
+
+    </style>
+</head>
+
+<body>
+    <div
+        style="margin: 0 auto;padding:50px 0 0 0;max-width:456px;width:100%;height:745px;background-image: url(bg.jpg); background-size:100%; background-repeat: no-repeat;background-position: 0 0;">
+        <div class="shadow" style="position: relative;transform-style: preserve-3d;width: 200px;height:200px;">
+            <img class="face front" id="detailLoader" src="xrk.jpg" alt="front">
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <img class="face back" id="detailBgLoader" src="pai.jpg" alt="back">
+        </div>
+    </div>
+</body>
+
+</html>
